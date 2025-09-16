@@ -8,36 +8,6 @@ ThemeData lightThemeData() {
     scaffoldBackgroundColor: Color(0XffFFFFFF),
     appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
     iconTheme: const IconThemeData(color: Color(0xff4C4C4C), size: 24),
-    // inputDecorationTheme: const InputDecorationTheme(
-    //   fillColor: Colors.white,
-    //   filled: true,
-    //   hintStyle: TextStyle(color: AppColors.lightGrey, fontSize: 16),
-    //   border: OutlineInputBorder(borderSide: BorderSide.none),
-    //   enabledBorder: OutlineInputBorder(
-    //       borderSide: BorderSide(color: AppColors.musicTabBorderDark)),
-    //   focusedBorder: OutlineInputBorder(
-    //       borderSide: BorderSide(color: AppColors.lightPrimary)),
-    //   errorBorder: OutlineInputBorder(
-    //       borderSide: BorderSide(color: AppColors.primaryPurple)),
-    //   focusedErrorBorder: OutlineInputBorder(
-    //       borderSide: BorderSide(color: AppColors.primaryPurple)),
-    // ),
-    // elevatedButtonTheme: ElevatedButtonThemeData(
-    //   style: ElevatedButton.styleFrom(
-    //       fixedSize: const Size.fromWidth(double.maxFinite),
-    //       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-    //       shape: RoundedRectangleBorder(
-    //         borderRadius: BorderRadius.circular(8),
-    //       ),
-    //       backgroundColor: AppColors.lightPrimary,
-    //       foregroundColor: Colors.white),
-    // ),
-    // expansionTileTheme: ExpansionTileThemeData(
-    //   shape: RoundedRectangleBorder(
-    //     side: const BorderSide(color: Colors.transparent),
-    //     borderRadius: BorderRadius.circular(8),
-    //   ),
-    // ),
     textTheme: TextTheme(
 
       labelLarge: GoogleFonts.poppins(

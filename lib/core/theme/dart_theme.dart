@@ -66,11 +66,6 @@ ThemeData darkThemeData() {
             color: Colors.white, fontSize: 4.7.w, fontWeight: FontWeight.w600),
         titleMedium: GoogleFonts.outfit(
             color: Colors.white, fontSize: 4.5.w, fontWeight: FontWeight.w600),
-        // titleSmall: TextStyle(
-        //     color: Colors.white,
-        //     fontSize: 16,
-        //     fontFamily: "Outfit",
-        //     fontWeight: FontWeight.w400),
         bodyLarge: GoogleFonts.outfit(
             color: Colors.white, fontSize: 3.5.w, fontWeight: FontWeight.w600),
         bodySmall: GoogleFonts.outfit(
@@ -79,8 +74,6 @@ ThemeData darkThemeData() {
             fontWeight: FontWeight.w400),
         headlineLarge: GoogleFonts.outfit(
             color: Colors.white, fontSize: 3.w, fontWeight: FontWeight.w400),
-        // bodyLarge: TextStyle(fontSize: 25),
-        // bodyMedium: TextStyle(color: Color.fromARGB(255, 255, 255, 255))
       ),
     );
   }
