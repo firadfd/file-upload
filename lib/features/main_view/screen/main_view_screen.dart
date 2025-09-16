@@ -31,9 +31,9 @@ class MainViewScreen extends StatelessWidget {
             ),
             _bottomNavigationItem(
               controller.currentIndex.value == 1
-                  ? IconPath.home_active
-                  : IconPath.home_inactive,
-              'Summery',
+                  ? IconPath.summarize_active
+                  : IconPath.summarize_inactive,
+              'Summarize',
             ),
             _bottomNavigationItem(
               controller.currentIndex.value == 2

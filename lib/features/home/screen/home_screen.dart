@@ -21,7 +21,9 @@ class HomeScreen extends StatelessWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed(AppRoute.uploadFile);
+        },
         backgroundColor: AppColors.primaryColor,
         child: Icon(Icons.add, color: Colors.white, size: 20.sp),
       ),

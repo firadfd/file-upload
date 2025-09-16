@@ -28,19 +28,10 @@ class EditProfileScreen extends StatelessWidget {
         child: Obx(() {
           return CustomElevatedButton(
             ontap: () {
-              if (formKey.currentState!.validate()) {
-                if (controller.selectedAge.isNotEmpty) {
-                  controller.updateProfile();
-                } else {
-                  Get.snackbar(
-                    "Error",
-                    "Please select gender",
-                    backgroundColor: Colors.red,
-                    colorText: Colors.white,
-                    snackPosition: SnackPosition.TOP,
-                  );
-                }
-              }
+              Get.back();
+              // if (formKey.currentState!.validate()) {
+              //   controller.updateProfile();
+              // }
             },
             isLoading: controller.isLoading.value,
             text: 'Update',
@@ -93,50 +84,7 @@ class EditProfileScreen extends StatelessWidget {
                   // isReadonly: controller.profileController.email.value != "",
                   validator: validateEmail,
                 ),
-
                 SizedBox(height: 10.h),
-
-                CustomTextView(
-                  'Age',
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w400,
-                ),
-                SizedBox(height: 10.h),
-                CustomDropDown(
-                  selectedValue: controller.selectedAge,
-                  items: EditProfileController.ageItems,
-                  onChanged: (value) {
-                    controller.onAgeChanged(value);
-                  },
-                  textStyle: GoogleFonts.andika(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.lightGrey,
-                  ),
-                  hintText: 'Age',
-                ),
-
-                SizedBox(height: 10.h),
-
-                CustomTextView(
-                  'Goals',
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w400,
-                ),
-                SizedBox(height: 10.h),
-                CustomDropDown(
-                  selectedValue: controller.selectedGoal,
-                  items: EditProfileController.goalsItems,
-                  onChanged: (value) {
-                    controller.onChanged(value);
-                  },
-                  textStyle: GoogleFonts.andika(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.lightGrey,
-                  ),
-                  hintText: 'Select',
-                ),
               ],
             ),
           ),

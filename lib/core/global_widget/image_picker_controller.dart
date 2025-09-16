@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 
 class ImagePickerController extends GetxController {
   RxList<File> selectedImages = <File>[].obs;
-
   Rx<File?> selectedImage = Rx<File?>(null);
 
   Future<void> pickFromStorage() async {
@@ -16,7 +15,6 @@ class ImagePickerController extends GetxController {
       selectedImage.value = File(result.files.single.path!);
     }
   }
-
 
   void clearImages() {
     selectedImage.value = null;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import '../../../core/helper/shared_prefarenses_helper.dart';
 import '../../../core/route/app_route.dart';
 import '../../../core/service_class/network_caller/repository/network_caller.dart';
@@ -17,11 +18,10 @@ class SignInController extends GetxController {
     super.onInit();
   }
 
-
   Future<void> signIn() async {
     Map<String, dynamic> registration = {
       "email": emailController.text,
-      "password": passwordController.text
+      "password": passwordController.text,
     };
 
     try {
@@ -39,28 +39,14 @@ class SignInController extends GetxController {
           "userToken",
           response.responseData['accessToken'],
         );
-        final isSetup = response.responseData['isSetup'];
-        if (isSetup) {
-          preferencesHelper.setBool("isSetup", isSetup);
-          Get.snackbar(
-            "Success",
-            backgroundColor: Colors.green,
-            colorText: Colors.white,
-            "User logged in successfully",
-            snackPosition: SnackPosition.TOP,
-          );
-          Get.offAllNamed(AppRoute.mainView);
-        } else {
-          preferencesHelper.setBool("isSetup", isSetup);
-          Get.snackbar(
-            "Success",
-            backgroundColor: Colors.yellow,
-            colorText: Colors.black,
-            "User logged in successfully Setup your profile",
-            snackPosition: SnackPosition.TOP,
-          );
-          Get.offAllNamed(AppRoute.mainView);
-        }
+        Get.snackbar(
+          "Success",
+          backgroundColor: Colors.green,
+          colorText: Colors.white,
+          "User logged in successfully",
+          snackPosition: SnackPosition.TOP,
+        );
+        Get.offAllNamed(AppRoute.mainView);
       } else {
         Get.snackbar(
           "Error",
@@ -75,8 +61,6 @@ class SignInController extends GetxController {
       isLoading.value = false;
     }
   }
-
-
 
   @override
   void dispose() {

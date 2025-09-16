@@ -95,9 +95,10 @@ class SignInScreen extends StatelessWidget {
                 Obx(() {
                   return CustomElevatedButton(
                     ontap: () {
-                      if (formKey.currentState!.validate()) {
-                        // controller.signIn();
-                      }
+                      Get.offAllNamed(AppRoute.mainView);
+                      // if (formKey.currentState!.validate()) {
+                      //   controller.signIn();
+                      // }
                     },
                     text: "Log in",
                     isLoading: controller.isLoading.value,

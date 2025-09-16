@@ -9,36 +9,20 @@ class EditProfileController extends GetxController {
   RxBool isLoading = false.obs;
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
-  static List<String> goalsItems = ['Select', 'Read more books', 'Improve comprehension','Enjoy reading'];
-  static List<String> ageItems = ['Age', '18-24', '25-34', '35-44', '45-54', '55+'];
-  late String selectedGoal;
-  late String selectedAge;
 
   @override
   Future<void> onInit() async {
-    selectedGoal = "Select";
-    selectedAge = "Age";
-    // selectedValue = profileController.gender.value == "" ? "Select" : profileController.gender.value;
-    // nameController.text = profileController.name.value;
-    // emailController.text = profileController.email.value;
     await sharedPreferencesHelper.init();
     super.onInit();
   }
 
-  void onChanged(String? newValue) {
-    selectedGoal = newValue!;
-  }
 
-  void onAgeChanged(String? newValue) {
-    selectedAge = newValue!;
-  }
 
   Future<void> updateProfile() async {
     var token = sharedPreferencesHelper.getString("userToken");
     final body = {
       "username": nameController.text,
       "email": emailController.text,
-      "gender": selectedAge,
     };
     if (token != null) {
       try {

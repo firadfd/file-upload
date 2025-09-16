@@ -101,9 +101,17 @@ class SignUpScreen extends StatelessWidget {
                 Obx(() {
                   return CustomElevatedButton(
                     ontap: () {
-                      if (formKey.currentState!.validate()) {
-                        // controller.registerUser();
-                      }
+                      Get.toNamed(
+                        AppRoute.signOtp,
+                        arguments: {
+                          "email": "firadfd833@gmail.com",
+                          "name": "Firad Fd",
+                          "password": "12345678",
+                        },
+                      );
+                      // if (formKey.currentState!.validate()) {
+                      //   controller.registerUser();
+                      // }
                     },
                     text: "Sign Up",
                     isLoading: controller.isLoading.value,

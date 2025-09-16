@@ -5,6 +5,7 @@ import '../../features/forgot_pass/screen/create_new_pass_screen.dart';
 import '../../features/forgot_pass/screen/forgot_otp_screen.dart';
 import '../../features/forgot_pass/screen/forgot_pass_screen.dart';
 import '../../features/forgot_pass/screen/pass_changed_screen.dart';
+import '../../features/home/screen/upload_file_screen.dart';
 import '../../features/main_view/screen/main_view_screen.dart';
 import '../../features/profile/screen/edit_profile_screen.dart';
 import '../../features/sign_in/screen/sign_in_screen.dart';
@@ -22,6 +23,7 @@ class AppRoute {
   static const String resetPassword = '/ResetPasswordScreen';
   static const String passwordChanged = '/PasswordChangedScreen';
   static const String mainView = '/MainViewScreen';
+  static const String uploadFile = '/UploadFile';
   static const String editProfile = '/EditProfileScreen';
 
   static final route = [
@@ -56,11 +58,7 @@ class AppRoute {
       page: () => ForgotOtpScreen(),
       transition: Transition.rightToLeft,
     ),
-    GetPage(
-      name: mainView,
-      page: () => MainViewScreen(),
-      transition: Transition.rightToLeft,
-    ),
+
     GetPage(
       name: resetPassword,
       page: () => CreateNewPassScreen(),
@@ -75,6 +73,16 @@ class AppRoute {
       name: editProfile,
       page: () => EditProfileScreen(),
       transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: mainView,
+      page: () => MainViewScreen(),
+      transition: Transition.rightToLeft,
+    ),
+    GetPage(
+      name: uploadFile,
+      page: () => UploadFileScreen(),
+      transition: Transition.downToUp,
     ),
 
   ];

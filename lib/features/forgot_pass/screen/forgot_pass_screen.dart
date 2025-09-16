@@ -6,6 +6,7 @@ import '../../../core/global_widget/custom_appbar.dart';
 import '../../../core/global_widget/custom_elevated_button.dart';
 import '../../../core/global_widget/custom_text_fields.dart';
 import '../../../core/global_widget/custom_text_view.dart';
+import '../../../core/route/app_route.dart';
 import '../../../core/utility/app_colors.dart';
 import '../../../core/validation/email_validation.dart';
 import '../controller/forgot_pass_controller.dart';
@@ -27,7 +28,11 @@ class ForgotPassScreen extends StatelessWidget {
           child: CustomElevatedButton(
             ontap: () {
               if (formKey.currentState!.validate()) {
-                controller.sendCode();
+                Get.toNamed(
+                  AppRoute.forgotPasswordOtp,
+                  arguments: {'email': "firadfd833@gmail.com"},
+                );
+                // controller.sendCode();
               }
             },
             text: 'Send Reset Code',

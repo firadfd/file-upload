@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 class FilePickerController extends GetxController {
   RxList<File> selectedFiles = <File>[].obs;
-
   Rx<File?> selectedFile = Rx<File?>(null);
 
   Future<void> pickFromStorage() async {

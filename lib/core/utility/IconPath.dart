@@ -8,6 +8,9 @@ class IconPath {
   static const String profile_active = '${asset}profile_active.png';
   static const String profile_inactive = '${asset}profile_inactive.png';
 
+  static const String summarize_active = '${asset}summarize_active.png';
+  static const String summarize_inactive = '${asset}summarize_inactive.png';
+
   static const String edit = '${asset}edit.png';
   static const String delete = '${asset}delete.png';
   static const String logout = '${asset}logout.png';
