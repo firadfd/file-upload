@@ -9,7 +9,7 @@ import '../../../core/utility/app_colors.dart';
 import '../../../core/utility/imagePath.dart';
 
 class PasswordChangedScreen extends StatelessWidget {
-  PasswordChangedScreen({super.key});
+  const PasswordChangedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

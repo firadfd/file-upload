@@ -11,15 +11,15 @@ class CustomTextView extends StatelessWidget {
   final TextOverflow? overflow;
 
   const CustomTextView(
-    String this.text, {
-    Key? key,
+    this.text, {
+    super.key,
     this.textAlign = TextAlign.start,
     this.fontSize = 14.0,
     this.color = Colors.black,
     this.maxLines,
     this.overflow,
     this.fontWeight = FontWeight.normal,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

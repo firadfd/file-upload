@@ -11,13 +11,13 @@ class CustomDropDown extends StatelessWidget {
   final ValueChanged<String?> onChanged;
 
   const CustomDropDown({
-    Key? key,
+    super.key,
     required this.hintText,
     required this.items,
     required this.selectedValue,
     required this.textStyle,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class CustomDropDown extends StatelessWidget {
       ),
       child: Center(
         child: DropdownButtonFormField<String>(
-          value: selectedValue,
+          initialValue: selectedValue,
           icon: Icon(
             Icons.arrow_drop_down,
             color: Colors.grey.shade600,

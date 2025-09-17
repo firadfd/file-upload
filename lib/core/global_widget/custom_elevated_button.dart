@@ -12,14 +12,14 @@ class CustomElevatedButton extends StatelessWidget {
   double? widths;
 
   CustomElevatedButton({
-    Key? key,
+    super.key,
     this.widths = 0,
     required this.ontap,
     required this.text,
     this.backgroundColor,
     this.textStyle,
     this.isLoading = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +27,13 @@ class CustomElevatedButton extends StatelessWidget {
 
     return ElevatedButton(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color>(
+        backgroundColor: WidgetStateProperty.resolveWith<Color>(
               (states) => effectiveColor,
         ),
-        minimumSize: MaterialStateProperty.all<Size>(
+        minimumSize: WidgetStateProperty.all<Size>(
           Size(widths == 0 ? double.infinity : widths!, 50),
         ),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.r),
           ),

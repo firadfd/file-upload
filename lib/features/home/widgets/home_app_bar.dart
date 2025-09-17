@@ -6,13 +6,13 @@ import 'package:google_fonts/google_fonts.dart';
 import '../controller/home_controller.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
+  @override
   final Size preferredSize;
   final Function? onProfileTap;
   final HomeController controller = Get.find();
 
-  HomeAppBar({Key? key,this.onProfileTap})
-    : preferredSize = Size.fromHeight(56.h),
-      super(key: key);
+  HomeAppBar({super.key, this.onProfileTap})
+    : preferredSize = Size.fromHeight(56.h);
 
   @override
   Widget build(BuildContext context) {

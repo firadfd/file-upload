@@ -11,14 +11,14 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String?)? validator;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     this.hintText,
     this.validator,
     this.controller,
     this.isReadonly = false,
     this.maxLines = 1,
     this.keyboardType = TextInputType.text,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

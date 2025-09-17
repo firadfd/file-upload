@@ -8,11 +8,11 @@ class CustomDateTimePicker extends StatelessWidget {
   final Function onClick;
 
   const CustomDateTimePicker({
-    Key? key,
+    super.key,
     this.hintText,
     this.controller,
     required this.onClick,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

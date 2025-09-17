@@ -6,7 +6,12 @@ class CustomDateOfBirthFiled extends StatelessWidget {
   final VoidCallback onTap;
   final String? hint;
 
-  CustomDateOfBirthFiled({required this.controller, required this.onTap, this.hint});
+  const CustomDateOfBirthFiled({
+    super.key,
+    required this.controller,
+    required this.onTap,
+    this.hint,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +33,8 @@ class CustomDateOfBirthFiled extends StatelessWidget {
         onTap: onTap,
         decoration: InputDecoration(
           border: InputBorder.none,
-          contentPadding:
-          EdgeInsets.symmetric(vertical: 12.h),
-          hintText: hint ??  "Date of birth",
+          contentPadding: EdgeInsets.symmetric(vertical: 12.h),
+          hintText: hint ?? "Date of birth",
           hintStyle: Theme.of(
             context,
           ).textTheme.labelMedium?.copyWith(color: Colors.grey),

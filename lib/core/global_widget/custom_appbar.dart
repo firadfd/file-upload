@@ -1,12 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  @override
   final Size preferredSize;
   final bool? lead;
   final bool? center;
@@ -14,13 +12,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Function? ontap;
 
   CustomAppBar({
-    Key? key,
+    super.key,
     this.title,
     this.lead,
     this.center = false,
     this.ontap,
-  }) : preferredSize = Size.fromHeight(56.h),
-       super(key: key);
+  }) : preferredSize = Size.fromHeight(56.h);
 
   @override
   Widget build(BuildContext context) {
