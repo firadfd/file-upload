@@ -20,14 +20,11 @@ class SignUpOtpController extends GetxController {
 
   @override
   Future<void> onInit() async {
-    print(Get.arguments);
     if (Get.arguments != null) {
       var data = Get.arguments;
       name.value = data['name'] ?? '';
       email.value = data['email'] ?? '';
       password.value = data['password'] ?? '';
-    } else {
-      print("Error: Get.arguments is null");
     }
     await preferencesHelper.init();
     super.onInit();

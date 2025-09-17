@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../../../core/utility/IconPath.dart';
+import '../../../core/utility/icon_path.dart';
 import '../../../core/utility/app_colors.dart';
 import '../controller/main_view_controller.dart';
 
@@ -25,20 +25,20 @@ class MainViewScreen extends StatelessWidget {
           items: [
             _bottomNavigationItem(
               controller.currentIndex.value == 0
-                  ? IconPath.home_active
-                  : IconPath.home_inactive,
+                  ? IconPath.homeActive
+                  : IconPath.homeInactive,
               'Home',
             ),
             _bottomNavigationItem(
               controller.currentIndex.value == 1
-                  ? IconPath.summarize_active
-                  : IconPath.summarize_inactive,
+                  ? IconPath.summarizeActive
+                  : IconPath.summarizeInactive,
               'Summarize',
             ),
             _bottomNavigationItem(
               controller.currentIndex.value == 2
-                  ? IconPath.profile_active
-                  : IconPath.profile_inactive,
+                  ? IconPath.profileActive
+                  : IconPath.profileInactive,
               'Profile',
             ),
           ],

@@ -45,7 +45,7 @@ class AppColors {
       800: getShade(color, value: 0.2, darker: true),
       900: getShade(color, value: 0.25, darker: true),
     };
-    return MaterialColor(color.value, colorShades);
+    return MaterialColor(color.toARGB32(), colorShades);
   }
 
   static const Color mainColor = Color(0xff141414);

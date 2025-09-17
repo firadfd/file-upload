@@ -9,9 +9,9 @@ class CustomElevatedButton extends StatelessWidget {
   final TextStyle? textStyle;
   final VoidCallback ontap;
   final bool isLoading;
-  double? widths;
+  final double? widths;
 
-  CustomElevatedButton({
+  const CustomElevatedButton({
     super.key,
     this.widths = 0,
     required this.ontap,

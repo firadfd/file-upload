@@ -18,8 +18,6 @@ class ForgotOtpController extends GetxController {
     if (Get.arguments != null) {
       var data = Get.arguments;
       email.value = data['email'] ?? '';
-    } else {
-      print("Error: Get.arguments is null");
     }
     await preferencesHelper.init();
     super.onInit();

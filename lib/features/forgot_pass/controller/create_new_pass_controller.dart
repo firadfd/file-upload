@@ -16,14 +16,11 @@ class CreateNewPassController extends GetxController {
     if (Get.arguments != null) {
       var data = Get.arguments;
       token.value = data['forgetToken'] ?? '';
-    } else {
-      print("Error: Get.arguments is null");
     }
     super.onInit();
   }
 
   Future<void> resetPassword() async {
-    print(token.value);
     isLoading.value = true;
     try {
       Map<String, dynamic> forgetPass = {

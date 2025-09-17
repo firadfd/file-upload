@@ -52,12 +52,9 @@ class UploadFileController extends GetxController {
         );
 
         pickerController.clearImages();
-      } else {
-        print('File selection canceled');
       }
     } catch (e) {
       errorMessage.value = 'Failed to select file: ${e.toString()}';
-      print('Error picking file: $e');
     }
   }
 

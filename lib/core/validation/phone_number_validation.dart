@@ -3,7 +3,6 @@ String? validatePhoneNumber(String? value) {
     return 'Phone number cannot be empty';
   }
 
-  // Phone number regex (accepts 10-15 digit numbers, with optional '+' at the beginning)
   const phonePattern = r'^\+?[0-9]{10,15}$';
   final regex = RegExp(phonePattern);
 

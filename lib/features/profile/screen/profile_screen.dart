@@ -5,14 +5,14 @@ import 'package:get/get.dart';
 import '../../../core/global_widget/custom_appbar.dart';
 import '../../../core/global_widget/custom_text_view.dart';
 import '../../../core/route/app_route.dart';
-import '../../../core/utility/IconPath.dart';
+import '../../../core/utility/icon_path.dart';
 import '../../../core/utility/app_colors.dart';
 import '../controller/profile_controller.dart';
 
 class ProfileScreen extends StatelessWidget {
   final ProfileController controller = Get.find();
 
-  var profileItems = [
+  final profileItems = [
     {'image': IconPath.edit, 'title': 'Edit Profile'},
     {'image': IconPath.delete, 'title': 'Delete Account'},
     {'image': IconPath.logout, 'title': 'Logout'},

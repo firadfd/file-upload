@@ -239,7 +239,6 @@ class NetworkCaller {
     }
   }
 
-
   Future<ResponseData> postDataWithImage({
     required String url,
     required Map<String, dynamic> bodyData,
@@ -364,5 +363,4 @@ class NetworkCaller {
       );
     }
   }
-
 }
